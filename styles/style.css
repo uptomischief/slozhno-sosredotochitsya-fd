@@ -1,5 +1,177 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* Вписывать сдесь медиазавыражения для адаптации под любые экраны */
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  position: relative;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+  min-height: 100vb;
+}
+
+/* ШАПКА */
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  block-size: 100vb;
+  min-block-size: 668px;
+  padding: 10px; /*????????*/
+}
+
+.header__rec {
+  position: absolute;
+  inset-block-start: 10px; /*????????*/
+  inset-inline-end: 38px; /*????????*/
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.header__rec::after {
+  content: " ";
+  position: absolute;
+  inset-block-start: 8px;
+  inset-inline-end: -28px;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__title {
+  color: var(--color-title);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 83%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  margin-inline-start: 10px;
+}
+
+.header__title-text {
+  display: block;
+}
+
+.title-decor {
+  display: grid;
+  /* gap: 20px; */
+  justify-items: end;
+  margin-inline-end: 10px;
+  min-inline-size: 364px;
+}
+
+.header__text-epigraph {
+  background-color: var(--accent-color);
+  color: var(--text-title-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  min-inline-size: 364px;
+  justify-self: end;
+}
+
+/* МЕНЮ */
+.header__theme-menu {
+  justify-self: end;
+  align-self: start;
+  margin-block-start: 10px;
+  margin-inline-end: 10px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 0 13px;
+  background-color: transparent;
+  text-transform: lowercase;
+  cursor: pointer;
+  line-height: 18px;
+  font-size: 18px;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--button-color-hover);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  border-color: var(--accent-color);
+  pointer-events: none;
+}
+
+/* МЕДИАВЫРАЖЕНИИ */
+@media (width >= 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .header__rec {
+    inset-block-start: 20px;
+    inset-inline-end: 48px;
+  }
+
+  .header-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: 0;
+  }
+
+  .header__text-epigraph {
+    max-inline-size: 364px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 20px;
+    margin-inline-end: 20px;
+  }
+
+  .title-decor {
+    margin-inline-end: 20px;
+    
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+    margin-inline-start: 20px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__text-epigraph {
+    max-inline-size: 491px;
+  }
 }

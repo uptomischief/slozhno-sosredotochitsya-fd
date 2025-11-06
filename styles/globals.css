@@ -40,3 +40,26 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+/* Уголки */
+.decorated-zone::before,
+.decorated-zone::after {
+  content: " ";
+  position: absolute;
+  inline-size: 25.035839080810547px;
+  block-size: 25.001531600952237px;
+}
+
+.decorated-zone::before {
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
