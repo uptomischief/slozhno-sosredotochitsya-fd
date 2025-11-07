@@ -6,8 +6,25 @@
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --accent-color: #ff0070;
-  --title-color: #db00ff;
-  --text-color: #f1b2ce;
-  --text-title-color: #000028;
+  --color-title: #db00ff;
+  --color-text: #f1b2ce;
+  --color-title-text: #000028;
   --button-hover-color: rgb(255 0 112 / 0.4);
+  --font-family:'IBM Plex Mono';
+  --font-weight-accent: 700;
+  --font-weight-text:400;
+  --text-size: 18px;
+  --text-size-main: 116px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --text-size-main: 120px;
+  }
+}
+
+@media (width >= 1024px) {
+  :root {
+    --text-size-main: 157px;
+  }
 }
