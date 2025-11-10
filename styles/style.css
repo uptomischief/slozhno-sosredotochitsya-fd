@@ -14,12 +14,34 @@
   min-height: 100vb;
 }
 
+/* УГОЛКИ */
+.decorated-zone::before,
+.decorated-zone::after {
+  content: " ";
+  position: absolute;
+  inline-size: 25.035839080810547px;
+  block-size: 25.001531600952237px;
+}
+
+.decorated-zone::before {
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
+
 /* ШАПКА */
 .header {
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  align-items: center;
   block-size: 100vb;
   min-block-size: 668px;
   /* padding-inline: 10px; */
@@ -33,13 +55,14 @@
   font-size: 18px;
   line-height: 25px;
   text-transform: uppercase;
+  align-self: center;
 }
 
 .header__rec::after {
-  content: ' ';
+  content: " ";
   position: absolute;
   inset-block-start: 8px;
-  inset-inline-end: -28px;
+  inset-inline-end: -20px;
   inline-size: 9px;
   block-size: 9px;
   border-radius: 50%;
@@ -54,10 +77,13 @@
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--accent-color);
   font-family: var(--font-family), sans-serif;
+  margin-left: 10px;
+  align-self: center;
 }
 
 .header__text {
-margin-block-end: 11px;
+  margin: 54px 10px 0;
+  height: fit-content;
 }
 
 .header__text p {
@@ -76,7 +102,7 @@ margin-block-end: 11px;
 .header .cards__title {
   text-align: right;
   background-color: var(--accent-color);
-} 
+}
 
 .title-decor {
   background-color: var(--accent-color);
@@ -90,12 +116,12 @@ margin-block-end: 11px;
   line-height: 23.4px;
 }
 
-
 /* МЕНЮ */
 .header__theme-menu {
   justify-self: end;
   align-self: center; /*start*/
   margin-block-start: 10px;
+  padding-right: 10px;
 }
 
 .header__theme-menu-list {
@@ -144,12 +170,12 @@ margin-block-end: 11px;
 .articles {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 17px;
   padding-block-start: 40px;
 }
 
 .articles:not(:first-of-type) {
-  padding-block-start: 52px;
+  padding-block-start: 47px;
 }
 
 .articles__title {
@@ -173,10 +199,18 @@ margin-block-end: 11px;
   gap: 10px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .cards__text {
   font-family: var(--font-family);
   font-size: var(--text-size);
   color: var(--color-text);
+  display: block;
+  line-height: 23.4px;
 }
 
 .cards__subtitle {
@@ -220,7 +254,6 @@ margin-block-end: 11px;
   place-items: center;
   background-color: var(--bg-color);
   min-block-size: 668px;
-
 }
 
 .footer__title {
@@ -234,7 +267,6 @@ margin-block-end: 11px;
 
 /* МЕДИАВЫРАЖЕНИИ */
 @media (width >= 768px) {
-
   /* ВЕРХУШКА */
   .header__text {
     max-inline-size: 364px;
@@ -259,7 +291,6 @@ margin-block-end: 11px;
 
   .title-decor {
     margin-inline-end: 20px;
-    
   }
   /* ГЛАВНАЯ ЧАСТЬ */
   /* .main {
@@ -285,13 +316,13 @@ margin-block-end: 11px;
     grid-column: 2;
   }
   /* 1 СЕКЦИЯ + 3 СЕКЦИЯ  */
-  .articles:first-of-type{
+  .articles:first-of-type {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
 
-  .articles:first-of-type .articles__title{
+  .articles:first-of-type .articles__title {
     grid-column: 1;
     margin: 0;
   }
@@ -306,7 +337,7 @@ margin-block-end: 11px;
   }
 
   .articles:first-of-type .cards:last-of-type {
-    margin-block-end: 0; 
+    margin-block-end: 0;
   }
 
   .articles:nth-of-type(3) {
@@ -322,7 +353,7 @@ margin-block-end: 11px;
 
   .articles:nth-of-type(3) .articles__content {
     grid-column: 2;
-   display: block;
+    display: block;
   }
 
   .articles:nth-of-type(3) .cards {
@@ -330,7 +361,7 @@ margin-block-end: 11px;
   }
 
   .articles:nth-of-type(3) .cards:last-of-type {
-    margin-block-end: 0; 
+    margin-block-end: 0;
   }
   /* 2 СЕКЦИЯ */
   .articles:nth-of-type(2) .articles__content {
@@ -409,7 +440,7 @@ margin-block-end: 11px;
   }
 
   .articles:nth-of-type(2) .articles__title {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
     grid-row: 1;
     max-inline-size: 100%;
     /* max-inline-size: 315px;  */

@@ -18,7 +18,7 @@
   --text-size-main: 116px;
 }
 
-@media (width >= 768px) {
+/* @media (width >= 768px) {
   :root {
     --text-size-main: 120px;
   }
@@ -28,4 +28,4 @@
   :root {
     --text-size-main: 157px;
   }
-}
+} */
