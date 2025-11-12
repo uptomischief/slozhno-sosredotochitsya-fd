@@ -278,7 +278,7 @@
     align-self: center;
     margin: 0;
     margin-inline-end: 20px !important;
-    margin-block-end: 10px;
+    margin-block-end: 23px;
   }
 
   .header__rec {
@@ -301,7 +301,7 @@
   }
 
   .articles {
-    padding-block-start: 70px;
+    padding-block-start: 60px;
   }
 
   .articles__title {
@@ -311,6 +311,7 @@
 
   .articles__content {
     padding-left: 4px;
+    gap: 20px;
   }
 
   .cards {
