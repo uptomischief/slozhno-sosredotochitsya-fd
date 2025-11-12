@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--bg-color);
-  min-height: 100vb;
+  min-height: 100vh;
 }
 
 /* УГОЛКИ */
@@ -42,7 +42,7 @@
   position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  block-size: 100vb;
+  block-size: 100vh;
   min-block-size: 668px;
 }
 
@@ -238,6 +238,11 @@
 /* конец ссылки */
 
 /* ГАЛЕРЕЯ */
+.gallery {
+  margin-block-start: 5px;
+  gap: 10px;
+}
+
 .gallery__content {
   display: flex;
   flex-direction: column;
@@ -249,7 +254,7 @@
 .footer {
   position: relative;
   display: grid;
-  block-size: 100vb;
+  block-size: 100vh;
   place-items: center;
   background-color: var(--bg-color);
   min-block-size: 668px;
@@ -273,7 +278,7 @@
     align-self: center;
     margin: 0;
     margin-inline-end: 20px !important;
-    margin-block-end: 25px;
+    margin-block-end: 10px;
   }
 
   .header__rec {
@@ -288,7 +293,7 @@
 
   .header__theme-menu {
     margin-block-start: 20px;
-    margin-inline-end: 20px;
+    margin-inline-end: 10px;
   }
 
   .title-decor {
@@ -296,7 +301,7 @@
   }
 
   .articles {
-    padding-block-start: 58px;
+    padding-block-start: 70px;
   }
 
   .articles__title {
@@ -369,18 +374,30 @@
     margin-block-end: 0;
   }
   /* 2 СЕКЦИЯ */
+  .articles:nth-of-type(2) {
+    gap: 20px;
+  }
+
+  .articles:nth-of-type(2) .cards {
+    margin-inline-start: 5px;
+  }
+
   .articles:nth-of-type(2) .articles__content {
     display: flex;
   }
   /* ГАЛЕРЕЯ */
   .gallery {
-    margin-inline: 12px;
+    margin-block-start: 0px;
+    margin-inline-start: 12px;
+    gap: 20px;
   }
+
   .gallery__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    gap: 25px;
+    gap: 22px;
+    margin-inline-end: 12px;
   }
 
   .gallery__image {
@@ -417,7 +434,7 @@
 
   /* ФУТЕР */
   .footer {
-    margin-top: 25px;
+    margin-top: 27px;
   }
 
   .footer__title {
@@ -436,18 +453,24 @@
 }
 
 @media (width >= 1024px) {
+  /* ВЕРХУШКА */
   .header__text {
     max-inline-size: 491px;
+    margin-block-end: 20px;
   }
   .header__theme-menu {
     justify-self: center;
     align-self: start;
-    margin-inline-start: 30px;
+    margin-inline-start: 20px;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
     gap: 9px;
+  }
+  /* ГЛАВНАЯ ЧАСТЬ */
+  .articles {
+    padding-block-start: 60px;
   }
 
   .articles__title {
@@ -483,14 +506,16 @@
     margin-inline-start: 10px;
   }
 
+  /* ГАЛЕРЕЯ */
   .gallery {
-    margin-block-start: 5px;
+    margin-block-start: 0px;
   }
 
   .gallery .title-decor {
-    margin-inline-end: 0px;
+    margin-inline-end: 10px;
   }
 
+  /* ПОДВАЛ */
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
