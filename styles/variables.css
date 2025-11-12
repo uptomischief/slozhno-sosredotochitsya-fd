@@ -9,23 +9,11 @@
   --color-title: #db00ff;
   --color-text: #f1b2ce;
   --color-title-text: #000028;
-  --color-article-title: #FF0070;
+  --color-article-title: #ff0070;
   --button-hover-color: rgb(255 0 112 / 0.4);
-  --font-family:'IBM Plex Mono';
+  --font-family: "IBM Plex Mono";
   --font-weight-accent: 700;
-  --font-weight-text:400;
+  --font-weight-text: 400;
   --text-size: 18px;
   --text-size-main: 116px;
 }
-
-/* @media (width >= 768px) {
-  :root {
-    --text-size-main: 120px;
-  }
-}
-
-@media (width >= 1024px) {
-  :root {
-    --text-size-main: 157px;
-  }
-} */

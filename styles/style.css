@@ -44,13 +44,12 @@
   grid-template-rows: 1fr min-content 1fr;
   block-size: 100vb;
   min-block-size: 668px;
-  /* padding-inline: 10px; */
 }
 
 .header__rec {
   position: absolute;
-  inset-block-start: 10px; /*????????*/
-  inset-inline-end: 38px; /*????????*/
+  inset-block-start: 10px;
+  inset-inline-end: 38px;
   color: var(--accent-color);
   font-size: 18px;
   line-height: 25px;
@@ -119,7 +118,7 @@
 /* МЕНЮ */
 .header__theme-menu {
   justify-self: end;
-  align-self: center; /*start*/
+  align-self: center;
   margin-block-start: 10px;
   padding-right: 10px;
 }
@@ -243,7 +242,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* padding-block-start: 10px; */
   padding-block-end: 40px;
 }
 
@@ -296,21 +294,6 @@
   .title-decor {
     margin-inline-end: 10px;
   }
-  /* ГЛАВНАЯ ЧАСТЬ */
-  /* .main {
-    margin-inline: 20px;
-  } */
-
-  /* .articles__content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-  }
-
-  .articles__title {
-    grid-column: 1;
-    width: 236px;
-  } */
 
   .articles {
     padding-block-start: 58px;
@@ -433,7 +416,6 @@
   }
 
   /* ФУТЕР */
-
   .footer {
     margin-top: 25px;
   }
@@ -489,10 +471,9 @@
   }
 
   .articles:nth-of-type(2) .articles__title {
-    grid-column: 1 ;
+    grid-column: 1;
     grid-row: 1;
-    max-inline-size: 100%;
-    max-inline-size: 315px; 
+    max-inline-size: 315px;
     margin-block-start: 5px;
   }
 
@@ -501,7 +482,7 @@
     grid-column: auto;
     margin-inline-start: 10px;
   }
-  
+
   .gallery {
     margin-block-start: 5px;
   }
