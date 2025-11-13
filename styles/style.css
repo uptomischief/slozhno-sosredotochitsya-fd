@@ -309,7 +309,6 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-    padding-block-start: 60px;
   }
 
   .articles__title {
