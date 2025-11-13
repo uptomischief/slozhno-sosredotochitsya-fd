@@ -94,11 +94,6 @@
   font-family: var(--font-family), sans-serif;
 }
 
-.header__header .title-decor {
-  justify-self: end;
-  background-color: transparent;
-}
-
 .header .cards__title {
   text-align: right;
   background-color: var(--accent-color);
@@ -242,7 +237,6 @@
 /* ГАЛЕРЕЯ */
 .gallery {
   display: grid;
-  margin-block-start: 5px;
   gap: 10px;
   margin-block-start: 50px;
 }
@@ -312,6 +306,10 @@
 
   .articles {
     padding-block-start: 60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding-block-start: 60px;
   }
 
   .articles__title {
@@ -330,12 +328,6 @@
 
   .cards__text {
     padding-right: 10px;
-  }
-
-  .articles {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
   }
 
   .articles:not(:first-of-type) {
@@ -458,7 +450,6 @@
   }
 
   .articles__title {
-    /* padding-left: 11px; */
     width: auto;
   }
 
