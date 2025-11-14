@@ -12,7 +12,7 @@
   --bg-image: url(../images/cover-image-light.png);
   --bg-color: #fff1f7;
   --accent-color: #ff8dcb;
-   --color-nav: #353430;
+  --color-nav: #353430;
   --color-rectangle: #353430;
   --color-title: #ffc2e6;
   --color-text: #353430;
@@ -30,7 +30,7 @@
     --bg-image: url(../images/cover-image-light.png);
     --bg-color: #fff1f7;
     --accent-color: #ff8dcb;
-     --color-nav: #353430;
+    --color-nav: #353430;
     --color-rectangle: #353430;
     --color-title: #ffc2e6;
     --color-text: #353430;

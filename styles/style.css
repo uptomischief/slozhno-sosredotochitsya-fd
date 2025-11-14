@@ -102,6 +102,7 @@
 
 .title-decor {
   background-color: var(--accent-color);
+  color: var(--color-title-text);
 }
 
 .cards__title {
